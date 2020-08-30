@@ -1,13 +1,9 @@
 name: 'Prepare macOS runner'
 description: 'Uninterrupted testing on macOS'
-inputs:
-  repo-token:
-    description: 'github token that can cancel the run'
-    required: true
 runs:
   using: composite
   steps:
-    - run: ${{ github.action_path }}/prepare-macos-runner.sh
+    - run: ${{ github.action_path }}/prepare-macos-runner.sh &
       shell: bash
 branding:
   color: purple

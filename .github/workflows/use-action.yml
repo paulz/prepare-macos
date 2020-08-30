@@ -13,3 +13,4 @@ jobs:
 
     steps:
     - uses: paulz/prepare-macos@main
+    - run: echo Complete

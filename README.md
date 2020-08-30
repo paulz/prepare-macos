@@ -16,8 +16,8 @@ How to use:
 
 # Use with UI Tests
 
-Xcode UI Tests are sensitive to open windows.
-This action helps to prevent following interruptions during a test run:
+Xcode UI Tests are sensitive to open windows and interruptions.
+This action helps to prevent following system alerts during a test run:
 
 
 1. Alert that computer with this name is already in use, [see example](https://github.com/actions/virtual-environments/issues/978#issuecomment-652704279)
@@ -26,3 +26,8 @@ This action helps to prevent following interruptions during a test run:
 4. Firewall prompt to receive incoming connections
 5. Finder window blocking screenshot
 
+### Why github action and not shell script?
+
+1. This action can run before checkout to rename computer earlier. It takes macOS a few seconds to report the conflict.
+2. Reuse across multiple projects instead of copying shell script.
+3. Put together ideas to help avoiding flaky UI tests.

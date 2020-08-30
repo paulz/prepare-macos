@@ -9,3 +9,6 @@ runs:
   steps:
     - run: ${{ github.action_path }}/prepare-macos-runner.sh
       shell: bash
+branding:
+  color: purple
+  icon: bell-off

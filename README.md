@@ -8,4 +8,21 @@
 
 How to use:
 
-    - uses: paulz/prepare-macos@v1
+    - name: Prepare macOS runner
+      uses: paulz/prepare-macos@v1
+
+[Example workflow](https://github.com/paulz/prepare-macos/blob/51b000eb8a9e8cd55aa29ed264aeb2b790bab234/.github/workflows/use-action.yml#L14-L15)
+
+
+# Use with UI Tests
+
+Xcode UI Tests are sensitive to open windows.
+This action helps to prevent following interruptions during a test run:
+
+
+1. Alert that computer with this name is already in use, [see example](https://github.com/actions/virtual-environments/issues/978#issuecomment-652704279)
+2. Notification Center alerts
+3. macOS upgrade is available alerts
+4. Firewall prompt to receive incoming connections
+5. Finder window blocking screenshot
+

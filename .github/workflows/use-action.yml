@@ -1,0 +1,15 @@
+name: use-action
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  use-action:
+
+    runs-on: macos-latest
+
+    steps:
+    - uses: paulz/prepare-macos@master

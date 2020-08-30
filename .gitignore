@@ -1,0 +1,4 @@
+# Ignore macOS Desktop Services Store
+# https://en.wikipedia.org/wiki/.DS_Store
+#
+**/.DS_Store
